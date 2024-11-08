@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #E0E0E0;
+}
+
 header{
     display: flex;
     margin: 20px;
@@ -42,16 +49,6 @@ nav ul li a{
 nav ul li a:visited {
     color: #27ae5f66;
 }
-
-
-body {
-    justify-content: center;
-    align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: darkblue;
-}
-
-
 
 img {
     height: 200px;
