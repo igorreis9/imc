@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Índice de Massa Corporal</h1>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a href="#whatisimc">O que é IMC</a></li>
+                    <li><a href="#calculate">Calcule o seu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="img">
+
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="whatisimc">
+                <p id="whatisimc">Índice de massa corporal (IMC) é um dos principais cálculos utilizados para determinar
+                    se você está
+                    no
+                    "peso ideal".
+                    É obtido através da divisão do peso pela altura ao quadrado (altura x altura).
+                </p>
+                <p>Os marcadores do IMC são:</p>
+                <ul>
+                    <li>- magreza leve (entre 17 e 18,4);</li>
+                    <li>- magreza moderada (entre 16 e 16,9);</li>
+                    <li>- magreza grave (menor que 16);</li>
+                    <li>- sobrepeso (índice de 25 a 29,9);</li>
+                    <li>- obesidade grau 1 (30 a 34,9);</li>
+                    <li>- obesidade severa (35 a 39,9);</li>
+                    <li>- obesidade mórbida (acima de 40).</li>
+                </ul>
+            </div>
+
+            <div class="calculate">
+                <!-- <form action="#"> -->
+                <p id="calculate">Para sua conveniência, esta página possui uma calculadora que retorna qual é o seu
+                    IMC, basta
+                    inserir a
+                    sua altura, peso e clicar em "Calcular IMC".</p>
+                <label for="altura"> Altura (cm):</label>
+                <input type="number" name="altura" id="altura">
+
+                <label for="peso"> Peso (kg):</label>
+                <input type="number" name="peso" id="peso">
+
+                <button class="button" onclick="calcImc()"> Calcular IMC </button>
+
+                <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="switchcolorbutton">
+        <button onclick="switchColor()">Mudar a cor do plano de fundo</button>
+    </div>
+
+    <footer>
+        &copy; 2024 Calcular índice de massa corporal
+    </footer>
+
+    <script>
+        function calcImc() {
+            const altura = parseFloat(document.getElementById("altura").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").innerText = resultado.toFixed(2);
+
+        }
+
+        function switchColor() {
+            document.body.style.background = document.body.style.background ==="red"? "darkblue" : "red";
+        }
+    </script>
+
+</body>
+
+</html>
